@@ -1,4 +1,3 @@
-// src/components/Map.js
 import React from 'react';
 
 const Map = () => {

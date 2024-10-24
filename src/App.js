@@ -6,17 +6,21 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './index.css'; 
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const App = () => {
     return (
-        <div>
-            <Header />
-            <Carousel />
-            <About />
-            <Services />
-            <Contact />
-            <Footer /> 
-        </div>
+        <ParallaxProvider>
+             <div>
+                <Header />
+                <Carousel />
+                <About />
+                <Services />
+                <Contact />
+                <Footer /> 
+            </div>
+        </ParallaxProvider>
+       
     );
 };
 

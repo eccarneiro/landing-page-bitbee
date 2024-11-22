@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './index.css'; 
 import { ParallaxProvider } from 'react-scroll-parallax';
+import Technologies from './components/Technologies';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                 <Carousel />
                 <About />
                 <Services />
+                <Technologies />
                 <Contact />
                 <Footer /> 
             </div>

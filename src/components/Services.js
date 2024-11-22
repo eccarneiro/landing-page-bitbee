@@ -1,124 +1,107 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 
 const Services = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [isColapse, setIsColapsed] = useState(false);
-    const [showContent, setShowContent] = useState(true);
-    const sectionRef = useRef(null);
-
     const services = [
         {
             title: "BeeSpot",
             description: "Transformando Wi-Fi em uma ferramenta de Marketing Poderosa",
-            link: "/servicos/BeeSpot",
-            image: "imagens/bee-3.jpg"
+            fullDescription: "A BeeSpot transforma a experiência de conexão Wi-Fi em uma poderosa ferramenta de marketing digital, ajudando seu negócio a aumentar a visibilidade e engajamento com os clientes.",
+            image: "/imagens/bee-3.jpg", 
         },
         {
             title: "Magazine",
             description: "A Modernização da Publicação Digital",
-            link: "servicos/Magazine",
-            image: "imagens/bee-3.jpg"
+            fullDescription: "O Magazine digitaliza a publicação de conteúdos de forma eficiente, criando uma nova maneira de interagir com o público, seja para marketing ou informações corporativas.",
+            image: "/imagens/bee-3.jpg", 
+            link: "/servicos/Magazine",
         },
         {
-            title: "Boutique de Software",
-            description: "Desenvolvimento de Software Personalizado",
-            link: "/servicos/Boutique-de-Software",
-            image: "imagens/bee-3.jpg"
+            title: "Semear",
+            description: "Semeando oportunidades de negócios",
+            fullDescription: "Com Semear, você encontra novas oportunidades de negócios com um processo de análise e recomendação de ideias inovadoras que podem transformar seu negócio.",
+            image: "/imagens/bee-3.jpg", 
+            link: "/servicos/Semear",
+        },
+        {
+            title: "E-AGC",
+            description: "Assembleias virtuais",
+            fullDescription: "E-AGC oferece soluções completas para realizar assembleias virtuais com total segurança e facilidade de uso para todos os participantes.",
+            image: "/imagens/bee-3.jpg",
+            link: "/servicos/E-AGC",
         }
     ];
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 800,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        beforeChange: (current, next) => setCurrentSlide(next),
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentService, setCurrentService] = useState(null);
+
+    const openModal = (service) => {
+        setCurrentService(service);
+        setIsModalOpen(true);
     };
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        setIsColapsed(true);
-                        setTimeout(() => setShowContent(true), 1000);
-                    }, 500);
-                } else {
-                    setIsColapsed(false);
-                    setShowContent(false);
-                }
-            },
-            { threshold: 0.3 }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            if (sectionRef.current) {
-                sectionRef.current.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     return (
-        <div ref={sectionRef} className="flex h-screen relative overflow-hidden">
-           
-            <div
-                className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out transform z-0 ${isColapse
-                    ? 'w-[60%] rotate-[30deg] translate-x-[-20%] translate-y-[-20%]'
-                    : 'w-full rotate-0'
-                    }`}
-                style={{
-                    backgroundImage: `url(${services[currentSlide].image})`,
-                    backgroundSize: '120% 120%',
-                    backgroundPosition: 'center',
-                    clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
-                }}
-            />
-            <div className={`w-1/2 relative overflow-hidden transition-all duration-1000 z-10 ${isColapse ? 'opacity-100' : 'opacity-0'}`}>
-                <Slider {...settings} className="relative z-20 h-full pt-40">
-                    {services.map((service, index) => (
-                        <div key={index} className="h-full relative flex items-center justify-center">
-                            <a
-                                href={service.link}
-                                className={`flex flex-col items-center justify-center h-full p-5 text-bit-bee-yellow cursor-pointer pt-40 transition-opacity duration-500 ${showContent ? 'opacity-100' : 'opacity-0'}`}
+        <div id='services' className=" px-4 mt-0">
+            <h2 className="text-center text-4xl font-bold text-bit-bee-yellow mb-10">Nossos Serviços</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-center w-full max-w-screen-xl mx-auto">
+                {services.map((service, index) => (
+                    <div
+                        key={index}
+                        className="group relative bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                        style={{ minHeight: '300px' }} 
+                    >
+                        <div
+                            className="absolute inset-0 bg-cover bg-center transition-all duration-300"
+                            style={{
+                                backgroundImage: `url(${service.image})`, 
+                                backgroundSize: 'cover', 
+                                minHeight: '300px'  
+                            }}
+                        ></div>
+                        <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                        <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white opacity-100 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                            <p className="text-lg mb-4">{service.description}</p>
+                            <button
+                                onClick={() => openModal(service)}
+                                className="mt-4 text-lg font-bold text-bit-bee-yellow hover:underline"
                             >
-                                <h3 className="text-4xl font-bold text-center">{service.title}</h3>
-                                <p className="text-lg text-center text-white mb-4">{service.description}</p>
-                            </a>
+                                Saiba mais
+                            </button>
                         </div>
-                    ))}
-                </Slider>
+                    </div>
+                ))}
             </div>
-            <div className={`w-1/2 flex items-center justify-center p-10 transition-all duration-1000 z-10 ${isColapse ? 'opacity-100' : 'opacity-0'}`}>
-                <div>
-                    <h2 className="text-4xl font-bold mb-4 text-bit-bee-yellow">Nossos Serviços</h2>
-                    <p className="text-lg text-white">
-                        Oferecemos uma variedade de serviços para atender às suas necessidades.
-                        Entre em contato para saber mais sobre como podemos ajudar seu negócio a crescer.
-                    </p>
+
+            {isModalOpen && (
+                <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 backdrop-blur-sm z-50">
+                    <div className="bg-black p-8 rounded-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 shadow-lg relative">
+                        <h3 className="text-3xl font-bold text-bit-bee-yellow mb-4">{currentService.title}</h3>
+                        <p className="text-lg mb-4">{currentService.fullDescription}</p>
+                        
+                        <a
+                            href={`https://wa.me/?text=${encodeURIComponent(currentService.fullDescription)}%20${encodeURIComponent(currentService.link)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center mt-4 text-lg font-bold text-white bg-green-500 hover:bg-green-600 rounded-full py-2 px-4 transition duration-300"
+                        >
+                            <FaWhatsapp className="mr-2 text-xl" />
+                            Entrar em contato via WhatsApp
+                        </a>
+                        <button
+                            onClick={closeModal}
+                            className="absolute top-2 right-2 text-white text-3xl hover:text-red-500"
+                        >
+                            <FaTimes />
+                        </button>
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 };

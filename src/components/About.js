@@ -5,11 +5,11 @@ const About = () => {
     const items = [
         {
             title: "Profissionalismo",
-            description: "Em nosso sucesso profissional não obtemos o que merecemos, mas sim o resultado da qualidade daquilo que entregamos ao nosso cliente."
+            description: "Nosso time de profissionais e desenvolvedores combinam expertise técnica com uma abordagem inovadora e orientada a resultados."
         },
         {
             title: "Inovação",
-            description: "Buscamos constantemente novas ideias e soluções para atender às necessidades dos nossos clientes de forma criativa e eficiente."
+            description: "Utilizando as melhores tecnologias de ponta, criamos produtos sob medida que atendam às necessidades específicas de cada cliente, independentemente do setor ou desafio."
         },
         {
             title: "Comprometimento",
@@ -21,15 +21,15 @@ const About = () => {
         <Parallax speed={5}>
             <div id='about' className="relative flex flex-col min-h-screen p-8 md:p-16 lg:p-24 mt-28">
                 <div className="relative z-10">
-                    <h1 className="text-center text-3xl md:text-5xl font-bold text-bit-bee-yellow mb-10">Sobre Nós</h1>
-                    <p className="text-center text-lg md:text-3xl font-bold text-bit-bee-yellow mb-10">
-                        Equipe de Engenheiros de Software altamente qualificada
+                    <p className="text-center text-lg lg:text-7xl font-bold text-bit-bee-yellow mb-10">
+                        
+                        Crie, inove e desenvolva conosco
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {items.map((item, index) => (
                             <div
                                 key={index}
-                                className="bg-gray-700 bg-opacity-10 p-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out transform hover:scale-105 hover:bg-yellow-500 hover:bg-opacity-20"
+                                className="bg-[#13678A] bg-opacity-50  p-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out transform hover:scale-105 hover:bg-[#13678A] hover:bg-opacity-90"
                             >
                                 <div className="relative w-full" style={{ height: "300px" }}>
                                     <div className="absolute inset-0 flex flex-col justify-center items-center px-4">

@@ -47,12 +47,10 @@ const Technologies = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="bg-black py-12 px-6 md:px-12 lg:px-20">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
+    <div className="bg-black py-20 mt-24 px-6 md:px-12 lg:px-20">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-bit-bee-yellow mb-14">
         Tecnologias que usamos
       </h2>
-      
-      {/* Grid com 2 linhas e 5 colunas */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 gap-6 justify-center">
         {technologies.map((tech, idx) => (
           <div

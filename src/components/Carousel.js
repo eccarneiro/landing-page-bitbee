@@ -10,7 +10,7 @@ const Carousel = () => {
     const [blurAmount, setBlurAmount] = useState(0);
     const [opacity, setOpacity] = useState(1);
     const [textBlur, setTextBlur] = useState(10);
-    const fullText = 'Transformamos ideias em soluções personalizadas e inovadoras BitBee.';
+    const fullText = 'Transformamos ideias em soluções personalizadas e inovadoras';
 
     const settings = {
         dots: false,
@@ -25,9 +25,7 @@ const Carousel = () => {
     };
 
     const slides = [
-        { image: "imagens/bee-1.jpg" },
-        { image: "imagens/bee-2.jpg" },
-        { image: "imagens/bee-3.jpg" }
+        { image: "imagens/fotografia.jpg" },
     ];
 
     useEffect(() => {
@@ -39,7 +37,7 @@ const Carousel = () => {
             const scrollTop = window.scrollY;
             const maxScroll = window.innerHeight;
             const blur = Math.min(scrollTop / maxScroll * 10, 10);
-            const newOpacity = Math.max(1 - scrollTop / maxScroll, 0.5);
+            const newOpacity = Math.max(1 - scrollTop / maxScroll, 1);
             setBlurAmount(blur);
             setOpacity(newOpacity);
         };
@@ -95,7 +93,7 @@ const Carousel = () => {
                         <button
                             className="flex items-center bg-green-500 font-semibold text-white text-lg md:text-xl lg:text-2xl py-3 px-6 md:py-4 md:px-7 rounded-full shadow-lg transition-all duration-300 hover:bg-green-600"
                             style={{ filter: `blur(${textBlur}px)`, transition: 'filter 0.5s ease-out' }}
-                            onClick={() => window.open('https://wa.me/yourphone', '_blank')}
+                            onClick={() => window.open('https://wa.me/5562994946120', '_blank')}
                         >
                             <FaWhatsapp className="mr-2 text-xl md:text-2xl lg:text-3xl" />
                             Fale Conosco no WhatsApp

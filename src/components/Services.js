@@ -8,20 +8,20 @@ const Services = () => {
             title: "BeeSpot",
             description: "Transformando Wi-Fi em uma ferramenta de Marketing Poderosa",
             fullDescription: "A BeeSpot transforma a experiência de conexão Wi-Fi em uma poderosa ferramenta de marketing digital, ajudando seu negócio a aumentar a visibilidade e engajamento com os clientes.",
-            image: "/imagens/bee-3.jpg", 
+            image: "/imagens/bee-3.jpg",
         },
         {
             title: "Magazine",
             description: "A Modernização da Publicação Digital",
             fullDescription: "O Magazine digitaliza a publicação de conteúdos de forma eficiente, criando uma nova maneira de interagir com o público, seja para marketing ou informações corporativas.",
-            image: "/imagens/bee-3.jpg", 
+            image: "/imagens/bee-3.jpg",
             link: "/servicos/Magazine",
         },
         {
             title: "Semear",
-            description: "Semeando oportunidades de negócios",
+            description: "Semeando oportunidades",
             fullDescription: "Com Semear, você encontra novas oportunidades de negócios com um processo de análise e recomendação de ideias inovadoras que podem transformar seu negócio.",
-            image: "/imagens/bee-3.jpg", 
+            image: "/imagens/bee-3.jpg",
             link: "/servicos/Semear",
         },
         {
@@ -46,44 +46,55 @@ const Services = () => {
     };
 
     return (
-        <div id='services' className=" px-4 mt-0">
-            <h2 className="text-center text-4xl font-bold text-bit-bee-yellow mb-10">Nossos Serviços</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-center w-full max-w-screen-xl mx-auto">
-                {services.map((service, index) => (
-                    <div
-                        key={index}
-                        className="group relative bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                        style={{ minHeight: '300px' }} 
-                    >
+        <div id="services" className="flex items-start px-4 -mt-56">
+            {/* Conteúdo existente */}
+            <div className="flex-1">
+                <h2 className="ml-80 text-4xl font-bold text-bit-bee-yellow mb-10">Nossos Serviços</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 justify-center items-center max-w-[700px] ml-20">
+                    {services.map((service, index) => (
                         <div
-                            className="absolute inset-0 bg-cover bg-center transition-all duration-300"
-                            style={{
-                                backgroundImage: `url(${service.image})`, 
-                                backgroundSize: 'cover', 
-                                minHeight: '300px'  
-                            }}
-                        ></div>
-                        <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
-                        <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white opacity-100 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                            <p className="text-lg mb-4">{service.description}</p>
-                            <button
-                                onClick={() => openModal(service)}
-                                className="mt-4 text-lg font-bold text-bit-bee-yellow hover:underline"
-                            >
-                                Saiba mais
-                            </button>
+                            key={index}
+                            className="group relative bg-[#13678A] rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                            style={{ minHeight: '300px' }}
+                        >
+                            <div
+                                className="absolute inset-0 bg-cover bg-center transition-all duration-300"
+                                style={{
+                                    backgroundImage: `url(${service.image})`,
+                                    backgroundSize: 'cover',
+                                    minHeight: '200px',
+                                }}
+                            ></div>
+                            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white opacity-100 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                                <p className="text-lg mb-4">{service.description}</p>
+                                <button
+                                    onClick={() => openModal(service)}
+                                    className="mt-4 text-lg font-bold text-bit-bee-yellow hover:underline"
+                                >
+                                    Saiba mais
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+            </div>
+
+            
+            <div className="ml-auto mr-10">
+                <img
+                    src="/imagens/imagem2.jpg" 
+                    alt="Imagem Lateral"
+                    className="w-[900px] h-auto rounded-lg shadow-xl transition-transform duration-300 hover:scale-105 mt-20"
+                />
             </div>
 
             {isModalOpen && (
                 <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 backdrop-blur-sm z-50">
-                    <div className="bg-black p-8 rounded-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 shadow-lg relative">
+                    <div className="bg-[#13678A] p-8 rounded-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 shadow-lg relative">
                         <h3 className="text-3xl font-bold text-bit-bee-yellow mb-4">{currentService.title}</h3>
                         <p className="text-lg mb-4">{currentService.fullDescription}</p>
-                        
                         <a
                             href={`https://wa.me/?text=${encodeURIComponent(currentService.fullDescription)}%20${encodeURIComponent(currentService.link)}`}
                             target="_blank"

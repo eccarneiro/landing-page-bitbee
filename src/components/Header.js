@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars } from 'react-icons/fa'; // Ícone do menu
+import { FaBars } from 'react-icons/fa'; 
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,15 +21,15 @@ const Header = () => {
             
             
             <nav className="hidden md:block">
-                <ul className="flex space-x-9">
+                <ul className="flex space-x-9 mr-10">
                     <li>
-                        <a href="#services" className="hover:underline hover:bg-black hover:bg-opacity-20 transition duration-200 p-2 rounded">Serviços</a>
+                        <a href="#services" className="bg-bit-bee-yellow text-black font-semibold transition duration-200 py-2 px-5 rounded hover:bg-opacity-80">Serviços</a>
                     </li>
                     <li>
-                        <a href="#about" className="hover:underline hover:bg-black hover:bg-opacity-20 transition duration-200 p-2 rounded">Sobre</a>
+                        <a href="#about" className="bg-bit-bee-yellow text-black font-semibold transition duration-200 py-2 px-5 rounded hover:bg-opacity-80">Sobre</a>
                     </li>
                     <li>
-                        <a href="#contact" className="hover:underline hover:bg-black hover:bg-opacity-20 transition duration-200 p-2 rounded">Contato</a>
+                        <a href="#contact" className="bg-bit-bee-yellow text-black font-semibold transition duration-200 py-2 px-5 rounded hover:bg-opacity-80">Contato</a>
                     </li>
                 </ul>
             </nav>
@@ -45,7 +45,7 @@ const Header = () => {
             <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"} absolute top-20 left-0 w-full bg-bit-bee-yellow p-5`}>
                 <ul className="flex flex-col space-y-5">
                     <li>
-                        <a href="#services" className="text-black hover:bg-black hover:bg-opacity-20 transition duration-200 p-2 rounded">Serviços</a>
+                        <a href="#services" className="text-black hover:bg-black hover:bg-opacity-20 transition duration-200 p-2 rounded ">Serviços</a>
                     </li>
                     <li>
                         <a href="#about" className="text-black hover:bg-black hover:bg-opacity-20 transition duration-200 p-2 rounded">Sobre</a>

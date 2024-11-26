@@ -3,118 +3,157 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { FaTimes } from 'react-icons/fa';
 
 const Services = () => {
-    const services = [
-        {
-            title: "BeeSpot",
-            description: "Transformando Wi-Fi em uma ferramenta de Marketing Poderosa",
-            fullDescription: "A BeeSpot transforma a experiência de conexão Wi-Fi em uma poderosa ferramenta de marketing digital, ajudando seu negócio a aumentar a visibilidade e engajamento com os clientes.",
-            image: "/imagens/bee-3.jpg",
-        },
-        {
-            title: "Magazine",
-            description: "A Modernização da Publicação Digital",
-            fullDescription: "O Magazine digitaliza a publicação de conteúdos de forma eficiente, criando uma nova maneira de interagir com o público, seja para marketing ou informações corporativas.",
-            image: "/imagens/bee-3.jpg",
-            link: "/servicos/Magazine",
-        },
-        {
-            title: "Semear",
-            description: "Semeando oportunidades",
-            fullDescription: "Com Semear, você encontra novas oportunidades de negócios com um processo de análise e recomendação de ideias inovadoras que podem transformar seu negócio.",
-            image: "/imagens/bee-3.jpg",
-            link: "/servicos/Semear",
-        },
-        {
-            title: "E-AGC",
-            description: "Assembleias virtuais",
-            fullDescription: "E-AGC oferece soluções completas para realizar assembleias virtuais com total segurança e facilidade de uso para todos os participantes.",
-            image: "/imagens/bee-3.jpg",
-            link: "/servicos/E-AGC",
-        }
-    ];
-
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [currentService, setCurrentService] = useState(null);
-
-    const openModal = (service) => {
-        setCurrentService(service);
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
 
     return (
-        <div id="services" className="flex items-start px-4 -mt-56">
-            {/* Conteúdo existente */}
-            <div className="flex-1">
-                <h2 className="ml-80 text-4xl font-bold text-bit-bee-yellow mb-10">Nossos Serviços</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 justify-center items-center max-w-[700px] ml-20">
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className="group relative bg-[#13678A] rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                            style={{ minHeight: '300px' }}
-                        >
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-all duration-300"
-                                style={{
-                                    backgroundImage: `url(${service.image})`,
-                                    backgroundSize: 'cover',
-                                    minHeight: '200px',
-                                }}
-                            ></div>
-                            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
-                            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white opacity-100 group-hover:opacity-100 transition-opacity duration-300">
-                                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                                <p className="text-lg mb-4">{service.description}</p>
-                                <button
-                                    onClick={() => openModal(service)}
-                                    className="mt-4 text-lg font-bold text-bit-bee-yellow hover:underline"
-                                >
-                                    Saiba mais
-                                </button>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            
-            <div className="ml-auto mr-10">
-                <img
-                    src="/imagens/imagem2.jpg" 
-                    alt="Imagem Lateral"
-                    className="w-[900px] h-auto rounded-lg shadow-xl transition-transform duration-300 hover:scale-105 mt-20"
-                />
-            </div>
-
-            {isModalOpen && (
-                <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 backdrop-blur-sm z-50">
-                    <div className="bg-[#13678A] p-8 rounded-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 shadow-lg relative">
-                        <h3 className="text-3xl font-bold text-bit-bee-yellow mb-4">{currentService.title}</h3>
-                        <p className="text-lg mb-4">{currentService.fullDescription}</p>
-                        <a
-                            href={`https://wa.me/?text=${encodeURIComponent(currentService.fullDescription)}%20${encodeURIComponent(currentService.link)}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center mt-4 text-lg font-bold text-white bg-green-500 hover:bg-green-600 rounded-full py-2 px-4 transition duration-300"
-                        >
-                            <FaWhatsapp className="mr-2 text-xl" />
-                            Entrar em contato via WhatsApp
-                        </a>
-                        <button
-                            onClick={closeModal}
-                            className="absolute top-2 right-2 text-white text-3xl hover:text-red-500"
-                        >
-                            <FaTimes />
-                        </button>
-                    </div>
-                </div>
-            )}
+        <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
+          <div className="mx-auto aspect-[1155/678] h-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"></div>
         </div>
-    );
-};
+        <div className="mx-auto text-center">
+          <h2 className="font-semibold text-8xl text-bit-bee-yellow mb-8">
+          Projetos</h2>
+          <p className="mt-4 text-balance text-5xl font-semibold tracking-tight text-gray-900 ">Transforme suas ideias com nossas soluções inovadoras. Vamos encontrar a melhor opção para você!</p>
+        </div>
 
+          <div className="mx-auto mt-16 grid max-w-lg  items-center  sm:mt-20 sm:gap-y-0 lg:max-w-6xl lg:grid-cols-4 gap-4 ">
+          
+          {/* <!-- card 1--> */}
+          <div className="rounded-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300 hover:bg-black hover:bg-opacity-80 hover:text-white hover:scale-105">
+            <h3 id="tier-hobby" className="flex justify-center text-3xl font-semibold text-indigo-600 ">BeeSpot</h3>
+            <p className="mt-6 text-base/7 transition-colors duration-500 hover:text-white">Transforme seu Wi-Fi em uma poderosa ferramenta de marketing e engajamento.</p>
+            <ul role="list" className="mt-8 space-y-3 text-sm/6  sm:mt-10">
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Maior visibilidade
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Engajamento com cliente
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Análises avançadas
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Suporte 24 horas
+              </li>
+            </ul>
+            <a href="#" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Entrar em contato</a>
+          </div>
+
+          {/* <!-- card 2--> */}
+          <div className="rounded-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300 hover:bg-black hover:bg-opacity-80 hover:text-white hover:scale-105">
+            <h3 id="tier-hobby" className="flex justify-center text-3xl font-semibold text-indigo-600 ">Magazine</h3>
+            <p className="mt-6 text-base/7  ">O Magazine digitaliza conteúdos, inovando a interação para marketing e comunicação corporativa.</p>
+            <ul role="list" className="mt-8 space-y-3 text-sm/6  sm:mt-10">
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Inovação Digital
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400 "viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Comunicação Interativa
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400 " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Marketing de Impacto
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Suporte 24 horas
+              </li>
+            </ul>
+            <a href="#" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Entrar em contato</a>
+          </div>
+
+          {/* <!-- card 3--> */}
+          <div className="rounded-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300 hover:bg-black hover:bg-opacity-80 hover:text-white hover:scale-105">
+            <h3 id="tier-hobby" className="flex justify-center text-3xl font-semibold text-indigo-600 ">Semear</h3>
+            <p className="mt-6 text-base/7 ">Semear apoia mulheres a superarem desafios e reconquistarem sua autonomia profissional.</p>
+            <ul role="list" className="mt-8 space-y-3 text-sm/6  sm:mt-10">
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Encontre oportunidades
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Transformação de Vida
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Autonomia Profissional
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Suporte Personalizado
+              </li>
+            </ul>
+            <a href="#" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Entrar em contato</a>
+          </div>
+
+          {/* <!-- card 4--> */}
+
+          <div className="rounded-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300 hover:bg-black hover:bg-opacity-80 hover:text-white hover:scale-105">
+            <h3 id="tier-hobby" className="flex justify-center text-3xl font-semibold text-indigo-600 ">E-AGC</h3>
+            <p className="mt-6 text-base/7 ">E-AGC oferece soluções para assembleias virtuais com segurança e facilidade.</p>
+            <ul role="list" className="mt-8 space-y-3 text-sm/6  sm:mt-10">
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Assembléias onlines
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Votações em tempo real
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Segurança nas reuniões
+              </li>
+              <li className="flex gap-x-3">
+                <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+                Suporte 24 horas
+              </li>
+            </ul>
+            <a href="#" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Entrar em contato</a>
+          </div>
+
+
+        
+        </div>
+      </div>
+)};
 export default Services;
+

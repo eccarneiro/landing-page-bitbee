@@ -4,7 +4,7 @@ const About = () => {
     return (
         <>
         <div>
-            <h1 className="text-center mt-32 font-semibold text-8xl text-bit-bee-yellow mb-6">Sobre nós</h1>
+            <h1 id='about' className="text-center mt-32 font-semibold text-8xl text-bit-bee-yellow mb-6">Sobre nós</h1>
         </div>
         <div 
             className="relative bg-cover bg-center mx-auto max-w-lg items-center sm:mt-10 lg:max-w-6xl gap-8 my-20" 
@@ -20,7 +20,7 @@ const About = () => {
                 
                 <div className="rounded-3xl bg-white p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300 hover:scale-105 h-64 flex flex-col justify-between">
                     <h3 className="flex justify-center text-3xl font-semibold text-indigo-600">Inovação</h3>
-                    <p className="text-base/7 transition-colors duration-500">Utilizando as melhores tecnologias de ponta, criamos produtos sob medida que atendam às necessidades específicas de cada cliente, independentemente do setor ou desafio.</p>
+                    <p className="text-base/7 transition-colors duration-500">Criamos soluções personalizadas com tecnologia de ponta, atendendo às necessidades específicas de cada cliente.</p>
                 </div>
 
                

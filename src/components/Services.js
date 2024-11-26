@@ -5,7 +5,7 @@ import { FaTimes } from 'react-icons/fa';
 const Services = () => {
 
     return (
-        <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div id='services' className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
           <div className="mx-auto aspect-[1155/678] h-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"></div>
         </div>
@@ -20,7 +20,7 @@ const Services = () => {
           {/* <!-- card 1--> */}
           <div className="rounded-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300 hover:bg-black hover:bg-opacity-80 hover:text-white hover:scale-105">
             <h3 id="tier-hobby" className="flex justify-center text-3xl font-semibold text-indigo-600 ">BeeSpot</h3>
-            <p className="mt-6 text-base/7 transition-colors duration-500 hover:text-white">Transforme seu Wi-Fi em uma poderosa ferramenta de marketing e engajamento.</p>
+            <p className="mt-6 text-base/7  hover:text-white">Transforme seu Wi-Fi em uma poderosa ferramenta de marketing e engajamento.</p>
             <ul role="list" className="mt-8 space-y-3 text-sm/6  sm:mt-10">
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">

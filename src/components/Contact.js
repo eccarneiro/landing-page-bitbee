@@ -3,19 +3,23 @@ import Map from "./Map";
 
 const Contact = () => {
   return (
-    <section id='contact' className=" text-white py-20">
+    <section id='contact' className=" text-white py-20 bg-bit-bee-yellow">
+       <div className="mx-auto text-center">
+        <div className="flex justify-center -mt-10">
+          <img src="/imagens/contact-us.png" alt="Logo da Marca" className="h-20 mb-10" />
+        </div>
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-bit-bee-yellow mb-12">
-          Entre em Contato
+        <h2 className="text-3xl font-bold text-center text-black mb-12">
+          ENTRE EM CONTATO
         </h2>
         <div className="flex flex-col md:flex-row justify-between items-stretch gap-8">
           
-          <div className="w-full md:w-1/2">
-            <div className="bg-gray-800 p-8 rounded-2xl shadow-lg">
+          <div className="w-[800px] h-[500px]">
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
               <form>
                 <div className="mb-6">
                   <label
-                    className="block text-sm font-semibold mb-2"
+                    className="flex text-2xl text-black  font-medium mb-4"
                     htmlFor="name"
                   >
                     Nome
@@ -23,14 +27,14 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
-                    className="border border-gray-700 bg-gray-900 text-white rounded-lg w-full p-3 transition focus:ring-2 focus:ring-bit-bee-yellow focus:outline-none"
+                    className="border border-gray-700 bg-opacity-20 bg-gray-900 text-white rounded-lg w-full p-3 transition focus:ring-2 focus:ring-bit-bee-yellow focus:outline-none"
                     placeholder="Seu nome"
                     required
                   />
                 </div>
                 <div className="mb-6">
                   <label
-                    className="block text-sm font-semibold mb-2"
+                    className="flex text-2xl text-black font-medium mb-4"
                     htmlFor="email"
                   >
                     Email
@@ -38,7 +42,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    className="border border-gray-700 bg-gray-900 text-white rounded-lg w-full p-3 transition focus:ring-2 focus:ring-bit-bee-yellow focus:outline-none"
+                    className="border border-gray-700 bg-opacity-20 bg-gray-900 text-white rounded-lg w-full p-3 transition focus:ring-2 focus:ring-bit-bee-yellow focus:outline-none"
                     placeholder="Seu email"
                     required
                   />
@@ -52,7 +56,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     id="message"
-                    className="border border-gray-700 bg-gray-900 text-white rounded-lg w-full p-3 transition focus:ring-2 focus:ring-bit-bee-yellow focus:outline-none"
+                    className="border border-gray-700 bg-opacity-20 bg-gray-900 text-white rounded-lg w-full p-3 transition focus:ring-2 focus:ring-bit-bee-yellow focus:outline-none"
                     rows="5"
                     placeholder="Sua mensagem"
                     required
@@ -60,7 +64,7 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="bg-bit-bee-yellow text-black font-bold py-3 px-6 rounded-lg hover:bg-bit-bee-yellow-dark transition"
+                  className="bg-bit-bee-yellow text-black font-bold py-3 px-6 rounded-lg hover:bg-bit-bee-yellow transition"
                 >
                   Enviar
                 </button>
@@ -70,9 +74,10 @@ const Contact = () => {
 
           
           <div className="w-full md:w-1/2">
-            <div className="bg-gray-800 p-8 rounded-2xl shadow-lg h-full flex flex-col">
-              <h3 className="text-2xl font-bold mb-6 text-bit-bee-yellow">
-                Nossa Localização
+          
+            <div className="bg-white p-8 rounded-2xl shadow-lg h-full flex flex-col">
+              <h3 className="text-2xl font-bold mb-6 text-black flex justify-center">
+                NOSSA LOCALIZAÇÃO
               </h3>
               <div className="flex-grow">
                 <Map className="w-full h-full rounded-xl shadow-md" />
@@ -80,6 +85,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

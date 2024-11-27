@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import './index.css'; 
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Technologies from './components/Technologies';
+import StickyWhatsapp from './components/StickWhatsApp';
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
                 <Technologies />
                 <Contact />
                 <Footer /> 
+                <StickyWhatsapp />
             </div>
         </ParallaxProvider>
        

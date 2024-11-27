@@ -9,7 +9,7 @@ const Header = () => {
     };
 
     return (
-        <header className="flex items-center justify-between p-5 absolute top-0 left-0 w-full text-bit-bee-yellow text-xl z-20">
+        <header className="flex items-center justify-between p-5  w-full h-20 text-bit-bee-yellow text-xl z-20 bg-opacity-30  fixed top-0 left-0 ">
             <div className="flex items-center">
                 <img 
                     src="/imagens/logo.png" 
@@ -23,18 +23,21 @@ const Header = () => {
             <nav className="hidden md:block">
                 <ul className="flex space-x-9 mr-10">
                     <li>
-                        <a href="#services" className="bg-bit-bee-yellow text-black font-semibold transition duration-200 py-2 px-5 rounded hover:bg-opacity-80">Serviços</a>
+                        <a href="#home" className=" text-white font-semibold transition duration-200 py-2 px-5 rounded hover:text-black hover:underline">HOME</a>
                     </li>
                     <li>
-                        <a href="#about" className="bg-bit-bee-yellow text-black font-semibold transition duration-200 py-2 px-5 rounded hover:bg-opacity-80">Sobre</a>
+                        <a href="#services" className=" text-white font-semibold transition duration-200 py-2 px-5 rounded hover:text-black hover:underline">SERVIÇOS</a>
                     </li>
                     <li>
-                        <a href="#contact" className="bg-bit-bee-yellow text-black font-semibold transition duration-200 py-2 px-5 rounded hover:bg-opacity-80">Contato</a>
+                        <a href="#about" className=" text-white font-semibold transition duration-200 py-2 px-5 rounded hover:text-black hover:underline">SOBRE</a>
+                    </li>
+                    <li>
+                        <a href="#contact" className=" text-white font-semibold transition duration-200 py-2 px-5 rounded hover:text-black hover:underline">CONTATO</a>
                     </li>
                 </ul>
             </nav>
 
-            
+          
             <button 
                 onClick={toggleMenu} 
                 className="md:hidden flex items-center justify-center p-2 bg-bit-bee-yellow text-black rounded-full">

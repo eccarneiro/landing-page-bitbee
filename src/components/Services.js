@@ -51,7 +51,7 @@ const Services = () => {
                 Suporte 24 horas
               </li>
             </ul>
-            <a href="#" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10 hover:bg-green-400">Entrar em contato</a>
+            <a href="https://wa.me/5562994946120?text=Olá,%20gostaria%20de%20conhecer%20sobre%20a%20BeeSpot!" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10 hover:bg-green-400">Entrar em contato</a>
           </div>
 
           {/* <!-- card 2--> */}
@@ -84,7 +84,7 @@ const Services = () => {
                 Suporte 24 horas
               </li>
             </ul>
-            <a href="#" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10 hover:bg-green-400">Entrar em contato</a>
+            <a href="https://wa.me/5562994946120?text=Olá,%20gostaria%20de%20conhecer%20sobre%20a%20Magazine!" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10 hover:bg-green-400">Entrar em contato</a>
           </div>
 
           {/* <!-- card 3--> */}
@@ -117,7 +117,7 @@ const Services = () => {
                 Suporte Personalizado
               </li>
             </ul>
-            <a href="#" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10 hover:bg-green-400">Entrar em contato</a>
+            <a href="https://wa.me/5562994946120?text=Olá,%20gostaria%20de%20conhecer%20sobre%20a%20Semear!" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10 hover:bg-green-400">Entrar em contato</a>
           </div>
 
           {/* <!-- card 4--> */}
@@ -151,7 +151,7 @@ const Services = () => {
                 Suporte 24 horas
               </li>
             </ul>
-            <a href="#" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10 hover:bg-green-400">Entrar em contato</a>
+            <a href="https://wa.me/5562994946120?text=Olá,%20gostaria%20de%20conhecer%20sobre%20a%20E-AGC!" aria-describedby="tier-hobby" className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10 hover:bg-green-400">Entrar em contato</a>
           </div>
 
 

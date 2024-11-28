@@ -33,7 +33,7 @@ export default function StickyWhatsapp({}) {
       >
         <a
           href={
-            "https://wa.me/5562994946120?text=Olá,%20vim%20através%20do%20site"
+            "https://wa.me/5562994946120?text=Olá,%20gostaria%20de%20conhecer%20a%20BitBee"
           }
           target="_blank"
           className="block bg-green-500 text-white p-2 lg:p-4 rounded-full"

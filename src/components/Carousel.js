@@ -92,7 +92,7 @@ const Carousel = () => {
                         <button
                             className="flex items-center bg-green-500 font-semibold text-sm md:text-lg lg:text-xl mt-11 px-6 py-3 md:py-4 md:px-7 rounded-full shadow-lg transition-all duration-300 hover:bg-green-600"
                             style={{ filter: `blur(${textBlur}px)`, transition: 'filter 0.5s ease-out' }}
-                            onClick={() => window.open('https://wa.me/5562994946120', '_blank')}
+                            onClick={() => window.open('https://wa.me/5562994946120?text=Olá,%20gostaria%20de%20conhecer%20a%20BitBee', '_blank')}
                         >
                             <FaWhatsapp className="mr-2 text-lg md:text-2xl lg:text-3xl" />
                             ENTRE EM CONTATO

@@ -3,41 +3,21 @@ import { FaBars, FaInstagram, FaLinkedin, FaTimes } from 'react-icons/fa';
 
 const Header = ({ onMenuToggle }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     const toggleMenu = () => {
-        const newMenuState = !isMenuOpen;
-        setIsMenuOpen(newMenuState);
-        onMenuToggle(newMenuState);
+        setIsMenuOpen(prevState => !prevState);
+        onMenuToggle(!isMenuOpen); 
     };
 
     return (
         <header
-            className={`flex items-center justify-between p-5 w-full h-20 text-bit-bee-yellow text-xl z-20 fixed top-0 left-0 transition-all duration-300 ${
-                isScrolled
-                    ? 'bg-black bg-opacity-90 backdrop-blur-md'
-                    : 'bg-black bg-opacity-0'
-            }`}
+            className="flex items-center justify-between p-5 w-full h-20 text-bit-bee-yellow text-xl z-20 fixed top-0 left-0 lg:bg-black"
         >
             <div className="flex items-center">
                 <img
                     src="/imagens/logo.png"
                     alt="Logo da Marca"
                     className="h-16"
-                    href="#home"
                 />
             </div>
 

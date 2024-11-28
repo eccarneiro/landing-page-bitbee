@@ -38,7 +38,7 @@ export default function StickyWhatsapp({}) {
           target="_blank"
           className="block bg-green-500 text-white p-2 lg:p-4 rounded-full"
         >
-          <FaWhatsapp className=" w-8 h-8 lg:w-12 lg:h-12" />
+          <FaWhatsapp className=" w-12 h-12 lg:w-12 lg:h-12" />
         </a>
       </div>
     </>

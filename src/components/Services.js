@@ -23,7 +23,7 @@ const Services = () => {
           
           {/* <!-- card 1--> */}
           <div className="rounded-3xl shadow-2xl bg-white p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300  hover:scale-105">
-            <h3 id="tier-hobby" className="flex justify-center text-3xl font-semibold text-black ">BeeSpot</h3>
+            <h3 id="tier-hobby" className="flex justify-center text-2xl font-semibold text-black ">BEESPOT</h3>
             <p className="mt-6 text-base/7  hover:text-white">Transforme seu Wi-Fi em uma poderosa ferramenta de marketing e engajamento.</p>
             <ul role="list" className="mt-8 space-y-3 text-sm/6  sm:mt-10">
               <li className="flex gap-x-3">
@@ -55,8 +55,8 @@ const Services = () => {
           </div>
 
           {/* <!-- card 2--> */}
-          <div className="rrounded-3xl shadow-2xl bg-white p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300  hover:scale-105">
-            <h3 id="tier-hobby" className="flex justify-center text-3xl font-semibold text-black ">Magazine</h3>
+          <div className="rounded-3xl shadow-2xl bg-white p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300  hover:scale-105">
+            <h3 id="tier-hobby" className="flex justify-center text-2xl font-semibold text-black ">MAGAZINE</h3>
             <p className="mt-6 text-base/7  ">O Magazine digitaliza conteúdos, inovando a interação para marketing e comunicação corporativa.</p>
             <ul role="list" className="mt-8 space-y-3 text-sm/6  sm:mt-10">
               <li className="flex gap-x-3">
@@ -89,7 +89,7 @@ const Services = () => {
 
           {/* <!-- card 3--> */}
           <div className="rounded-3xl  shadow-2xl bg-white p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300  hover:scale-105">
-            <h3 id="tier-hobby" className="flex justify-center text-3xl font-semibold text-black">Semear</h3>
+            <h3 id="tier-hobby" className="flex justify-center text-2xl font-semibold text-black">SEMEAR</h3>
             <p className="mt-6 text-base/7 ">Semear apoia mulheres a superarem desafios e reconquistarem sua autonomia profissional.</p>
             <ul role="list" className="mt-8 space-y-3 text-sm/6  sm:mt-10">
               <li className="flex gap-x-3">
@@ -121,9 +121,8 @@ const Services = () => {
           </div>
 
           {/* <!-- card 4--> */}
-
-          <div className="rrounded-3xl shadow-2xl bg-white p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300  hover:scale-105">
-            <h3 id="tier-hobby" className="flex justify-center text-3xl font-semibold text-black ">E-AGC</h3>
+          <div className="rounded-3xl shadow-2xl bg-white p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300  hover:scale-105">
+            <h3 id="tier-hobby" className="flex justify-center text-2xl font-semibold text-black ">E-AGC</h3>
             <p className="mt-6 text-base/7 ">E-AGC oferece soluções para assembleias virtuais com segurança e facilidade.</p>
             <ul role="list" className="mt-8 space-y-3 text-sm/6  sm:mt-10">
               <li className="flex gap-x-3">

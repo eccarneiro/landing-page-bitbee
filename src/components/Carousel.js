@@ -51,8 +51,7 @@ const Carousel = () => {
 
     return (
         <Parallax speed={-10}>
-            <div id='home' className="relative w-full h-screen">
-                {/* Slider */}
+            <div className="relative w-full h-screen">
                 <Slider {...settings} className="h-full">
                     {slides.map((slide, index) => (
                         <div className="relative w-full h-full overflow-hidden" key={index}>
@@ -67,10 +66,10 @@ const Carousel = () => {
                     ))}
                 </Slider>
 
-                {/* Texto sobreposto */}
-                <div className="absolute inset-0 flex flex-col items-center md:items-start px-4 lg:ml-28 justify-center text-center md:text-left z-10">
+                
+                <div  className="absolute inset-0 flex flex-col items-center md:items-start px-4 lg:ml-28 justify-center text-center md:text-left z-10">
                     <h1
-                        className="text-3xl md:text-4xl lg:text-7xl font-bold mb-4 text-bit-bee-yellow transition-all duration-2000"
+                        className="text-3xl md:text-4xl lg:text-7xl font-bold mb-0 text-bit-bee-yellow transition-all duration-2000"
                         style={{ filter: `blur(${textBlur}px)`, transition: 'filter 0.5s ease-out' }}
                     >
                         BITBEE

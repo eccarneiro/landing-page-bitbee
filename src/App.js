@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Carousel from './components/Carousel';
 import About from './components/About';
@@ -10,21 +10,23 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import Technologies from './components/Technologies';
 import StickyWhatsapp from './components/StickWhatsApp';
 
+
 const App = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <ParallaxProvider>
-             <div>
-                <Header />
+            <div>
+                <Header onMenuToggle={(state) => setIsMenuOpen(state)} />
                 <Carousel />
                 <About />
                 <Services />
                 <Technologies />
                 <Contact />
                 <Footer /> 
-                <StickyWhatsapp />
+                {!isMenuOpen && <StickyWhatsapp />}
             </div>
         </ParallaxProvider>
-       
     );
 };
 

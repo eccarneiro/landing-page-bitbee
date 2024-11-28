@@ -11,6 +11,7 @@ const Header = ({ onMenuToggle }) => {
 
     return (
         <header
+        
             className="flex items-center justify-between p-5 w-full h-20 text-bit-bee-yellow text-xl z-20 fixed top-0 left-0 lg:bg-black"
         >
             <div className="flex items-center">

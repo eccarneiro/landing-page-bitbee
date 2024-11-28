@@ -51,7 +51,7 @@ const Carousel = () => {
 
     return (
         <Parallax speed={-10}>
-            <div className="relative w-full h-screen">
+            <div id='home' className="relative w-full h-screen">
                 <Slider {...settings} className="h-full">
                     {slides.map((slide, index) => (
                         <div className="relative w-full h-full overflow-hidden" key={index}>

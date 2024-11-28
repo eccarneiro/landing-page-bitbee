@@ -24,7 +24,7 @@ const Services = () => {
           {/* <!-- card 1--> */}
           <div className="rounded-3xl shadow-2xl bg-white p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300  hover:scale-105">
             <h3 id="tier-hobby" className="flex justify-center text-2xl font-semibold text-black ">BEESPOT</h3>
-            <p className="mt-6 text-base/7  hover:text-white">Transforme seu Wi-Fi em uma poderosa ferramenta de marketing e engajamento.</p>
+            <p className="mt-6 text-base/7">Transforme seu Wi-Fi em uma poderosa ferramenta de marketing e engajamento.</p>
             <ul role="list" className="mt-8 space-y-3 text-sm/6  sm:mt-10">
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
@@ -121,6 +121,7 @@ const Services = () => {
           </div>
 
           {/* <!-- card 4--> */}
+
           <div className="rounded-3xl shadow-2xl bg-white p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-md sm:p-10 lg:mx-0 lg:rounded-3xl transition-all duration-300  hover:scale-105">
             <h3 id="tier-hobby" className="flex justify-center text-2xl font-semibold text-black ">E-AGC</h3>
             <p className="mt-6 text-base/7 ">E-AGC oferece soluções para assembleias virtuais com segurança e facilidade.</p>

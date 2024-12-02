@@ -143,7 +143,7 @@ const Header = ({ onMenuToggle }) => {
                                 window.open('https://wa.me/5562994946120?text=Olá,%20gostaria%20de%20conhecer%20a%20BitBee!', '_blank');
                             }}
                             className="w-full bg-bit-bee-yellow text-black py-3 rounded-md text-lg font-bold hover:bg-opacity-80"
-                        >
+                            >
                             Entrar em Contato
                         </button>
                     </div>
